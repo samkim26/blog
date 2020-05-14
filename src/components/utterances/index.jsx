@@ -18,7 +18,7 @@ export const Utterences = ({ repo }) => {
       src,
       repo,
       branch,
-      theme: isDarkTheme == DARK_THEME ? DARK_THEME : LIGHT_THEME,
+      theme: isDarkTheme == THEME.DARK ? DARK_THEME : LIGHT_THEME,
       label: 'comment',
       async: true,
       'issue-term': 'pathname',
