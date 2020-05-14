@@ -28,7 +28,7 @@ export default ({ data, pageContext, location }) => {
   const metaData = data.site.siteMetadata
   const { title, comment, siteUrl, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
-  // const { title: postTitle, date, thumbnail } = post.frontmatter
+  const { title: postTitle, date } = post.frontmatter
   // const thumbnailSrc = thumbnail
   //   ? `${siteUrl}${thumbnail.childImageSharp.fixed.src}`
   //   : undefined
@@ -63,7 +63,7 @@ export default ({ data, pageContext, location }) => {
   )
 }
 
-export const pageQuery = graphql'
+export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
@@ -86,13 +86,6 @@ export const pageQuery = graphql'
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        // thumbnail {
-        //   childImageSharp {
-        //     fixed(width: 800) {
-        //       src
-        //     }
-        //   }
-        // }
       }
     }
   }
