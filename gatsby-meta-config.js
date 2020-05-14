@@ -11,7 +11,7 @@ module.exports = {
     facebook: '', // Your Facebook account
     linkedin: '', // Your LinkedIn account
   },
-  icon: 'content/assets/favicon.ico', // Add your favicon
+  icon: 'content/assets/favicon.png', // Add your favicon
   keywords: ['blog'],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
