@@ -1,17 +1,17 @@
 module.exports = {
-  title: 'Myunghwan',
-  description: '명환이의 블로그 - 복쭈 No.1',
-  author: 'Myung-hwan',
+  title: 'Hwanny',
+  description: '명환이 블로그',
+  author: 'Myunghwan',
   introduction: 'Nothing changes if nothing changes',
-  siteUrl: 'https://gatsby-starter-bee.netlify.com', // Your blog site url
+  siteUrl: 'https://hwanny.netlify.app/', // Your blog site url
   social: {
     twitter: '', // Your Twitter account
-    github: '', // Your GitHub account
+    github: 'https://github.com/samkim26', // Your GitHub account
     medium: '', // Your Medium account
     facebook: '', // Your Facebook account
     linkedin: '', // Your LinkedIn account
   },
-  icon: '', // Add your favicon
+  icon: 'content/assets/favicon.ico', // Add your favicon
   keywords: ['blog'],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
