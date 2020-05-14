@@ -1,6 +1,6 @@
 # hwanny.netlify.app
 
-<a href="https://hwanny.netlify.app/" target="_blank">들어와 주실거죠?</a>
+<a href="https://hwanny.netlify.app/" target='_blank'>들어와 주실거죠?</a>
 
 ![](/assets/baegyul.gif)
 
