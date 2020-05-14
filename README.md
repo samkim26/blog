@@ -1,6 +1,6 @@
 # hwanny.netlify.app
 
-[들어와 주실거죠?](hwanny.netlify.app/)
+[들어와 주실거죠?](https://hwanny.netlify.app/)
 
 ![](/assets/baegyul.gif)
 
