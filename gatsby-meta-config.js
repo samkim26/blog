@@ -15,13 +15,13 @@ module.exports = {
   keywords: ['blog'],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: '', // Your repository for archive comment
+    utterances: 'samkim26/hwanny.netlify.app', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: '',
+    buyMeACoffeeId: 'hwanny',
   },
   share: {
     facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
