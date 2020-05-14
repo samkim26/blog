@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: 'https://hwanny.netlify.app/', // Your blog site url
   social: {
     twitter: '', // Your Twitter account
-    github: 'https://github.com/samkim26', // Your GitHub account
+    github: 'samkim26', // Your GitHub account
     medium: '', // Your Medium account
     facebook: '', // Your Facebook account
     linkedin: '', // Your LinkedIn account
