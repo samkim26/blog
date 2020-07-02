@@ -1,7 +1,7 @@
 ---
 title: TIL (Today I Learned) 시작
 date: 2020-06-29 00:06:39
-category: TIL
+category: til
 draft: false
 ---
 
