@@ -54,5 +54,19 @@ object 배열 : 객체를 저장하는 배열
 
 ---
 
+* **class**
+  * DataType 측면 : 새로운 자료형을 만드는(설계하는) 도구 = **모델링** 도구
+  * OOP 측면 : 객체의 상태 정보와 행위 정보를 추출하여 **캡슐화**하는 도구
+
+* **Model** : class를 Model이라고도 부른다. (역할이 정해지므로)
+  1. DTO(Data Transfer Object) : 데이터 구조, 데이터를 담는 역할, 이동하기위해서 데이터를 담는다
+      - VO(Value Object) : 객체를 담아서 하나의 값으로 취급한다는 의미로 사용
+  2. DAO(Data Access Object) : 데이터를 처리하는 역할(비즈니스 로직), 데이터베이스와 CRUD하는 역할
+  3. Utility(Helper Object) : 도움을 주는 기능을 제공하는 역할(날짜, 시간, 통화, 인코딩 등)
+
+앞으로 사용하게 될 class들 : API(Application Programming Interface)
+
+--- 
+
 ### 출처
 [인프런 - Java TPC](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/)
