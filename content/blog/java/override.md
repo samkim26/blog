@@ -40,3 +40,5 @@ r = new Cat();
 Dog g = (Dog) r;
 Cat c = (Cat) r;
 ```
+
+upcasting이 되면 downcasting이 가능하다. (upcasting이 전제가 돼야 downcasting 가능)
