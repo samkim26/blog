@@ -1,5 +1,5 @@
 ---
-title: Polymorphism / abstract class
+title: Polymorphism / abstract class / interface
 date: 2020-08-05 12:08:81
 category: java
 draft: false
@@ -20,6 +20,7 @@ draft: false
 
 > instanceof 로 객체 타입을 확인
 
+
 ## 추상클래스 활용 (**일부** 다형성 보장)
 
 추상메소드 - 구현부가 없다. (불완전한 메소드)
@@ -32,3 +33,10 @@ draft: false
 
 > 서로 기능이 비슷한 클래스들을 묶을 때 -> 추상클래스   
  서로 기능이 다른 클래스 -> 인터페이스
+
+
+## 인터페이스 활용 (100% 다형성 보장)
+
+100% 추상 메소드만 가능 - 구현된 메소드를 가질 수 없다.
+
+하위 클래스의 동작 방식을 몰라도 인터페이스를 100% 동작 시킬 수 있다.
