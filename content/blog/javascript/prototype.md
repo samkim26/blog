@@ -27,5 +27,74 @@ prototype 프로퍼티는 객체다.
 - [instance].\_\_proto__.constoructor
 
 
+## 메소드 상속 및 동작 원리
+
+```javascript
+function Person(n, a) {
+    this.name = n;
+    this.age = a;
+}
+
+var gomu = new Person('고무곰', 30);
+var iu = new Person('아이유', 25);
+
+gomu.setOlder = function() {
+    this.age += 1;
+}
+gomu.getAge = function() {
+    return this.age;
+}
+iu.setOlder = function() {
+    this.age += 1;
+}
+iu.getAge = function() {
+    return this.age;
+}
+```
+위의 코드에서 반복을 줄여보자
+
+```javascript
+// 프로토타입으로 메소드를 이동시킴
+function Person(n, a) {
+    this.name = n;
+    this.age = a;
+}
+Person.prototype.setOlder = function() {
+    this.age += 1;
+}
+Person.prototype.getAge = function() {
+    return this.age;
+}
+
+var gomu = new Person('고무곰', 30);
+var iu = new Person('아이유', 25);
+```
+
+```javascript
+gomu.__proto__.setOlder();
+gomu.__proto__.getAge(); // NaN
+```
+NaN (Not a Number) 가 나오게 된다. 메소드들의 this의 gomu가 아니라 gomu.proto를 가리키고 있기 때문이다.
+그런데 __proto__는 생략이 가능하기 때문에 마치 자신의 것처럼 메소드를 호출할 수 있게 해준다. 
+
+```javascript
+gomu.setOlder();
+gomu.getAge(); // 31
+```
+이 경우에 this는 gomu를 가리킨다. 그래서 정상적으로 출력된다.
+
+그런데 생성자 함수의 프로토타입에 age 프로퍼티가 있다면 결과는 달라진다.
+```javascript
+Person.prototype.age = 100;
+
+gomu.__proto__.setOlder();
+gomu.__proto__.getAge(); // 101
+
+gomu.setOlder();
+gomu.getAge(); // 31
+```
+메소드 호출 시 this가 어떻게 바인딩 되는지 상기!
+
+
 ## 출처
 > 인프런 Javascript 핵심 개념 알아보기 - JS Flow
