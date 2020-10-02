@@ -96,5 +96,9 @@ gomu.getAge(); // 31
 메소드 호출 시 this가 어떻게 바인딩 되는지 상기!
 
 
+## PROTOTYPE CHAINING
+
+
+
 ## 출처
 > 인프런 Javascript 핵심 개념 알아보기 - JS Flow
