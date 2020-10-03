@@ -98,7 +98,45 @@ gomu.getAge(); // 31
 
 ## PROTOTYPE CHAINING
 
+Array.prototype 은 객체이다.
+근데 prototype이 객체라는 말은 Object 생성자 함수의 new 연산자로 생성된 인스턴스라는 말이 되고, 따라서 Object.prototype을 상속받게 된다.
 
+prototype은 모두 객체이므로 모든 데이터타입은 protytpe chaining을 따른다.
+
+각 생성자 함수 prototype에는 각 데이터타입에만 해당하는 메소드들이 정의되어있다.
+
+모든 데이터타입에 대해서 생성자 함수의 prototype의 __로 연결된 Object.prototype에는 자바스크립트 전체를 통괄하는 공통된 메소스들이 정의되어있다.
+이 메소드들은 모든 데이터타입이 prototype chaining을 통해서 접근할 수 있다.
+
+```javascript
+var arr = [1, 2, 3];
+
+arr.toString = function() {
+    return this.join('_');
+}
+
+console.log(arr.toString()); // 1_2_3
+
+console.log(arr.__proto__.toString.call(arr)); // 1,2,3
+
+console.log(arr.__proto__.__proto__.toString.call(arr)); // [object Array]
+
+```
+
+배열인 데이터는 모두 동일하게 출력하도록 한다면
+```javascript
+Array.prototype.toString = function() {
+    return '[' + this.join(', ') + ']';
+}
+
+
+console.log(arr.toString()); // [1, 2, 3]
+
+console.log(arr.__proto__.toString.call(arr)); // [1, 2, 3]
+
+console.log(arr.__proto__.__proto__.toString.call(arr)); // [object Array]
+```
+배열에서 직접 호출한 것과 proto를 통해 호출한 것이 결과가 같다.
 
 ## 출처
 > 인프런 Javascript 핵심 개념 알아보기 - JS Flow
