@@ -50,5 +50,91 @@ console.log(gomu.getInformations(gomu)); // error
 console.log(Person.getInformations(gomu)); // ok - 생성자 함수 직접 접근
 ```
 
+
+## CLASS INHERITANCE
+
+```javascript
+function Person(name, age) {
+    this.name = name || '이름없음';
+    this.age = age || '나이모름';
+}
+Person.prototype.getName = function() {
+    return this.name;
+}
+Person.prototype.getAge = function() {
+    return this.age;
+}
+
+function Employee(name, age, position) {
+    this.name = name || '이름없음';
+    this.age = age || '나이모름';
+    this.position = position || '직책모름';
+}
+Employee.prototype.getName = function() {
+    return this.name;
+}
+Employee.prototype.getAge = function() {
+    return this.age;
+}
+Employee.prototype.getPosition = function() {
+    return this.position;
+}
+```
+위 코드에서 getName(), getAge() 메소드는 겹친다.
+
+겹치는 메소드는 상위 Person 에만 두고 Employee 에는 겹치지 않는 메소드를 두게 만든다.
+
+```javascript
+Employee.prototype = new Person();
+Employee.prototype.constructor = Employee; // 원래 있던 prototype 객체와 같은 기능을 수행하도록 한다.
+Employee.prototype.getPosition = function() { // prototype을 덮어씌운 다음에 정의한다.
+    return this.position;
+}
+```
+
+아래 코드와 같이 prototype chaining상의 불필요한 프로퍼티를 제거한다.
+
+```javascript
+function Bridge() {}
+Bridge.prototype = Person.prototype;
+Employee.prototype = new Bridge();
+Employee.prototype.constructor = Employee;
+
+Employee.prototype.getPosition = function() {
+    return this.position;
+}
+```
+
+최종본 - extendClass, superClass
+```javascript
+var extendClass = (function() {
+    function Bridge() {}
+    return function(Parent, Child) {
+        Bridge.prototype = Parent.prototype;
+        Child.prototype = new Bridge();
+        Child.prototype.constructor = Child;
+        Child.prototype.superClass = Parent;
+    }
+})();
+function Person(name, age) {
+    this.name = name || '이름없음';
+    this.age = age || '나이모름';
+}
+Person.prototype.getName = function() {
+    return this.name;
+}
+Person.prototype.getAge = function() {
+    return this.age;
+}
+function Employee(name, age, position) {
+    this.superClass(name, age);
+    this.position = position || '직책모름';
+}
+extendClass(Person, Employee);
+Employee.prototype.getPosition = function() {
+    return this.position;
+}
+```
+
 ## 출처
 > 인프런 Javascript 핵심 개념 알아보기 - JS Flow
