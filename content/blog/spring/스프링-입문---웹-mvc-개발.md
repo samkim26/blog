@@ -22,6 +22,13 @@ HomeController 생성
 HTTP - GET/POST 방식
 
 
+## 회원 웹 기능 - 조회
+
+회원 목록 페이지 동작 - 템플릿 언어가 렌더링
+
+${members} : model 안에 있는 것을 가져온다. getter로 출력!
+
+
 ## 출처
 
 > 인프런 '스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술'
