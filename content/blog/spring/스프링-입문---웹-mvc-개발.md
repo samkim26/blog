@@ -2,7 +2,7 @@
 title: 스프링 입문 - 회원 관리 예제(웹 MVC 개발)
 date: 2020-10-17 16:10:06
 category: spring
-draft: false
+draft: true
 ---
 
 ## 회원 웹 기능 - 홈 화면 추가

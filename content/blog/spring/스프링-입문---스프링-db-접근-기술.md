@@ -2,7 +2,7 @@
 title: 스프링 입문 - 스프링 DB 접근 기술
 date: 2020-10-20 13:10:75
 category: spring
-draft: false
+draft: true
 ---
 
 ## H2 데이터베이스 설치
