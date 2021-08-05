@@ -1,7 +1,7 @@
 ---
 title: OOP 이야기
 date: 2021-08-04 11:08:57
-category: java
+category: devcourse
 draft: false
 ---
 
