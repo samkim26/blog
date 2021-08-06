@@ -1,5 +1,5 @@
 ---
-title: Collection 이야기
+title: (W1D4) Collection 이야기
 date: 2021-08-05 15:08:00
 category: devcourse
 draft: false
