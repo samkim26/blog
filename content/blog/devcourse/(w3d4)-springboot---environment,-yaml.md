@@ -44,54 +44,10 @@ yaml과 같이 지원하지 않는 포맷은 스프링에서 PropertySourceFacto
 
 리스트는 형변환이 바로 되지 않는다. -> 스프링부트에서 제공해주는 형태로
 
-```java
-@Configuration
-@ConfigurationProperties(prefix = "kdt") // 속성 바인딩
-public class OrderProperties implements InitializingBean {
+클래스에 @ConfigurationProperties 어노테이션을 붙여서 YAML파일과 바인딩할 수 있게 한다.
 
-    private String version;
-
-    private int minimumOrderAmount;
-
-    private List<String> supportVendors;
-
-    private String description;
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public Integer getMinimumOrderAmount() {
-        return minimumOrderAmount;
-    }
-
-    public void setMinimumOrderAmount(Integer minimumOrderAmount) {
-        this.minimumOrderAmount = minimumOrderAmount;
-    }
-
-    public List<String> getSupportVendors() {
-        return supportVendors;
-    }
-
-    public void setSupportVendors(List<String> supportVendors) {
-        this.supportVendors = supportVendors;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-}
-```
+@EnableConfigurationProperties 어노테이션을 사용해서 @ConfigurationProperties을 처리할 수 있게 만들어준다.
 
 프로퍼티를 그룹화시킬 때 클래스로 만들고 주입받아서 쓴다. - 큰 프로젝트에서 쓰인다.
 
 작은 프로젝트는  @Value 어노테이션으로 충분
-
