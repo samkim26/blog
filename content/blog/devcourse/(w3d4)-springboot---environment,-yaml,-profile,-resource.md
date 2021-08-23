@@ -1,5 +1,5 @@
 ---
-title: (W3D4) SpringBoot - Environment, YAML
+title: (W3D4) SpringBoot - Environment, YAML, Profile, Resource
 date: 2021-08-19 22:08:05
 category: devcourse
 draft: false
@@ -51,3 +51,31 @@ yaml과 같이 지원하지 않는 포맷은 스프링에서 PropertySourceFacto
 프로퍼티를 그룹화시킬 때 클래스로 만들고 주입받아서 쓴다. - 큰 프로젝트에서 쓰인다.
 
 작은 프로젝트는  @Value 어노테이션으로 충분
+
+
+
+## Profile
+
+스프링 프로파일은 애플리케이션 설정 일부를 분리하여 특정 환경에서만 사용 가능하게 한다. 
+
+프로파일을 이용하면 여러 빈 정의들이 특정 프로파일에서만 동작하게 할수도 있고 특정 프로퍼티들을 특정 프로파일로 정의해서 해당 프로파일이 엑티브일 때 적용되게 할 수도 있다.
+
+스프링 프레임워크에서는 profile 대한 빈 정의만 지원하고 있고,  profile별로 property의 변경은 스프링부트에서 지원한다.
+
+스프링부트에서 실행해야 다른 프로파일로 인한 설정들을 읽을 수 있다.
+
+
+
+## Resource
+
+애플리케이션을 만들다 보면 외부 리소스를 읽을 필요가 있다. 다양한 형태의 파일을 가져올 때 호출해야 할 API가 각각 다른데, 스프링은 이런 어려움을 `Resource` 와 `ResourceLoader` 인터페이스를 통해 하나의 API로 제공한다.
+
+ResourceLoader : 리소스를 가져온다.
+
+Resource의 다양한 구현체를 제공한다.
+
+모든 ApplicationContext에서 Resource 객체를 가져올 수 있다.
+
+working directory 기준으로 파일을 찾는다.
+
+리소스를 ApplicationContext를 통해 쉽게 가져올 수 있다.
