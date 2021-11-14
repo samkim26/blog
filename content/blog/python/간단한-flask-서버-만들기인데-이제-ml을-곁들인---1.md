@@ -2,7 +2,7 @@
 title: 간단한 Flask 서버 만들기인데 이제 ML을 곁들인 - 1
 date: 2021-05-26 16:05:41
 category: python
-draft: false
+draft: true
 ---
 
 이번 학기에 캡스톤디자인 프로젝트를 진행하면서 만든 결과물들을 보여주기 위해 간단한 서버를 만들게 되었습니다.
