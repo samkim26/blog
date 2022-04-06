@@ -1,6 +1,6 @@
 ---
 title: Effective Java - Item 6
-date: 2022-04-05 11:04:37
+date: 2022-04-06 11:04:37
 category: book
 draft: false
 ---
