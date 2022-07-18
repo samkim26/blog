@@ -1,5 +1,5 @@
 ---
-title: Effective Java - Item 20
+title: Effective Java - Item 21
 date: 2022-06-02 21:11:32
 category: book
 draft: false
